@@ -26,7 +26,7 @@ exports.loginSubmit = async(req, res)=>{
     }
 
     try {
-        const user = await Users.findOne({username: req.body.username})
+        const user = await User.findOne({username: req.body.username})
         if(!user){
             res.send('Check credentials')
         }
