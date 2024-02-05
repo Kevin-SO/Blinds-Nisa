@@ -30,7 +30,7 @@ app.use(express.static('public'))
 
 
 //Connect DB
-//connectDB()
+connectDB()
 
 
 //Templating Engine
