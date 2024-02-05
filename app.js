@@ -7,7 +7,7 @@ const app = express()
 const connectDB = require('./server/config/db');
 
 
-const port =  process.env.PORT || 5051
+const port =  process.env.PORT 
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
