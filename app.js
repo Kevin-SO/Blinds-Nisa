@@ -29,7 +29,8 @@ app.use(express.static('public'))
 // )
 
 
-//Connect DB connectDB()
+//Connect DB 
+connectDB()
 
 
 //Templating Engine
