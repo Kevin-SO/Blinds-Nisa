@@ -1,0 +1,14 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    
+
+
+}
+
+#username_i, #password_i, #submit{
+    margin: 5px;
+}

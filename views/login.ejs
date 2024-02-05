@@ -1,0 +1,10 @@
+<div class="login-container"> 
+    <h1 class="title"> <%= locals.title %> </h1>
+    
+    <form action="/loginSubmit" method="post">
+        <input type="text" name="username" id="username_i" placeholder="Username"><br>
+        <input type="password" name="password" id="password_i" placeholder="Password"><br>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+    <a href="/signup">Not a member? Sign Up</a>
+    </div>
