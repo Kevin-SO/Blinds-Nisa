@@ -7,7 +7,7 @@ const app = express()
 const connectDB = require('./server/config/db');
 
 
-const port =  process.env.PORT 
+const port =  process.env.PORT || 5051
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
@@ -30,7 +30,7 @@ app.use(express.static('public'))
 
 
 //Connect DB
-//connectDB()
+connectDB()
 
 
 //Templating Engine

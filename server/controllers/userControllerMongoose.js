@@ -17,7 +17,7 @@ exports.login = async(req, res)=>{
     const locals = {
     title: 'Login!'
     }
-    res.render('Login',{locals})
+    res.render('login',{locals})
 }
 
 exports.loginSubmit = async(req, res)=>{
