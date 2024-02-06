@@ -1,12 +1,14 @@
 require('dotenv').config()
 
 const express = require('express')
-const expressLayout = require('express-ejs-layouts')
+const expressLayouts = require('express-ejs-layouts')
 const bcrypt = require("bcrypt")
-const app = express()
+
+
+const { set } = require('mongoose');
 const connectDB = require('./server/config/db');
 
-
+const app = express()
 const port =  process.env.PORT || 5051
 
 app.use(express.urlencoded({extended: true}))
@@ -35,11 +37,17 @@ connectDB()
 
 //Templating Engine
 
-app.use(expressLayout)
+app.use(expressLayouts)
 app.set('layout', './layouts/main')
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs')
 
 app.use('/', require('./server/routes/user'))
+app.use('/', require('./server/routes/dashboard'))
+
+app.get('*', function(req, res){
+    res.status(404).render('404')
+    });
+
 
 app.listen(port,
     ()=>{

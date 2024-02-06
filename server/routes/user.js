@@ -1,5 +1,6 @@
 const express  = require('express')
-const router = express.Router();
+const router = express.Router()
+const { isLoggedIn } = require('../middleware/checkAuth')
 const userController = require('../controllers/userControllerMongoose')
 
 /** 

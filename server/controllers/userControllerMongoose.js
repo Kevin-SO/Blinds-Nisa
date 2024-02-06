@@ -95,6 +95,8 @@ exports.dashboard = async (req, res)=>{
     const locals = {
         title: 'Blinds Nisa!'
     }
-    res.render('dasboard/dashboard')
+    res.render('dashboard', {locals,
+        layout: '../views/layouts/dashboard'
+    })
 
 }
