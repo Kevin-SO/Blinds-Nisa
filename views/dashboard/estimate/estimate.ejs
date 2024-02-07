@@ -1,0 +1,31 @@
+<h1>Estimate</h1>
+<div class="main-cont">
+  <div class="calculator">
+   
+        <input type="text" name="width" id="width" >
+        <input type="text" name="height" id="height" >
+        <button onclick="calculatee()" > Add Item </button>
+  
+  </div>
+  <div id="items-list">
+    <ul id="items">
+      <li>A</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  
+
+  function calculatee() {
+  //var area = width * height
+  //var item = {Width:width, Height: height}
+  var width = document.getElementById('width').value
+  var height = document.getElementById('height').value
+  var area = parseFloat(width)*parseFloat(height)
+  var ul = document.getElementById("items");
+  var li = document.createElement("li");
+  li.appendChild(document.createTextNode(`Width: ${width} x Height: ${height} Area: ${area} `));
+  ul.appendChild(li);
+  }
+</script>

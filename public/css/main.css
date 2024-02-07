@@ -9,6 +9,10 @@
 
 }
 
+body{
+    background-color: rgb(100, 100, 100);
+}
+
 #username_i, #password_i, #submit{
     margin: 5px;
 }
@@ -32,4 +36,24 @@
 .main{
     display: flex;
     flex-direction: row;
+}
+
+.main-cont{
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.calculator{
+    width: 50%;
+    align-items: center;
+    justify-content: left;
+}
+
+.items-list{
+    width: 50%;
+}ss
+.frame{
+    width: 100%;
 }
