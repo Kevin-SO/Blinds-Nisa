@@ -64,8 +64,6 @@ exports.signupSubmit = async (req, res)=>{
             username: req.body.username,
             password: req.body.password,
         }
-    
-
     try{
         let user = await User.findOne({
             username: req.body.username})
@@ -75,27 +73,21 @@ exports.signupSubmit = async (req, res)=>{
         const saltRounds = 10
         const hashedPassword = await bcrypt.hash(newUser.password, saltRounds)
         newUser.password = hashedPassword
-
-
-
-
         user = await User.create(newUser);
-        res.redirect('/dashboard');
+        res.redirect('/');
     }
   }
   catch(error){console.log(error);
   }
-
-
-
 }
-
 
 exports.dashboard = async (req, res)=>{ 
     const locals = {
-        title: 'Blinds Nisa!'
+        title: 'Blinds Nisa!',
     }
-    res.render('dashboard', {locals,
+    res.render('dashboard', {
+        username: req.user.username,
+        locals,
         layout: '../views/layouts/dashboard'
     })
 
