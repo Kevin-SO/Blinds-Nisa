@@ -9,9 +9,6 @@
 
 }
 
-body{
-    background-color: rgb(100, 100, 100);
-}
 
 #username_i, #password_i, #submit{
     margin: 5px;
